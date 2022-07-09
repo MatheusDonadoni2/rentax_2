@@ -1,7 +1,14 @@
-import express from "express";
+import express, { json } from "express";
+import { categoriesRoutes } from "./routes/categories.routes";
+import { specificationsRoutes } from "./routes/specifications.routes";
 
 const app = express();
 
-app.get("/", (request, response) => response.json({ message: "Hello World" }));
-
-app.listen(3333, () => console.log("Server is running in port 3333"));
+app.use(express.json());
+app.use("/categories",categoriesRoutes) 
+app.use("/specifications",specificationsRoutes
+) 
+app.listen(
+        3333, 
+        () => console.log("Server is running in port 3333")
+);
