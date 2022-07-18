@@ -1,15 +1,13 @@
 import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 import { inject, injectable } from 'tsyringe';
-import { AppError } from '../../../../error/AppError';
-
-import { IUsersRepository } from '../../repositories/IUsersRepository';
+import { AppError } from '@shared/errors/AppError';
+import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 
 interface IRequest {
   email: string;
   password: string;
 }
-
 interface IRespose {
   user: {
     name: string;
