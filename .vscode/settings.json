@@ -2,5 +2,10 @@
     "eslint.codeActionsOnSave.rules": null,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    }
+    },
+    "editor.fontSize": 18,
+    "editor.fontFamily": "Firacode",
+    "editor.codeLensFontSize": 0,
+    "scm.inputFontSize": 12,
+    "editor.lineHeight": 28
 }
