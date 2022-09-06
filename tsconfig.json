@@ -6,21 +6,11 @@
     "module": "commonjs",
     "baseUrl": ".",
     "paths": {
-      "@modules/*": [
-        "./src/modules/*"
-      ],
-      "@config/*": [
-        "./src/config/*"
-      ],
-      "@shared/*": [
-        "./src/shared/*"
-      ],
-      "@errors/*": [
-        "src/shared/errors/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ]
+      "@modules/*": ["./src/modules/*"],
+      "@config/*": ["./src/config/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@errors/*": ["src/shared/errors/*"],
+      "@utils/*": ["./src/utils/*"]
     },
     "typeRoots": [
       "src/@types",

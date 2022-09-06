@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn add class-transform
+  /usr/bin/node /usr/bin/yarn add @babel/cli @babel/core @babel/node @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators @babel/preset-env babel-plugin-module-resolver babel-plugin-tranform-typescript-metadata -D
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/doni/Android/Sdk/emulator:/home/doni/Android/Sdk/tools:/home/doni/Android/Sdk/tools/bin:/home/doni/Android/Sdk/platform-tools
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/class-transform: Not found
+  Error: https://registry.yarnpkg.com/babel-plugin-tranform-typescript-metadata: Not found
       at Request.params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66145:18)
       at Request.self.callback (/usr/lib/node_modules/yarn/lib/cli.js:140890:22)
       at Request.emit (events.js:400:28)
@@ -68,6 +68,7 @@ npm manifest:
     "dependencies": {
       "aws-sdk": "^2.1209.0",
       "bcrypt": "^5.0.1",
+      "class-transformer": "^0.5.1",
       "csv-parse": "^5.2.2",
       "dayjs": "^1.11.4",
       "dotenv": "^16.0.2",
@@ -1564,6 +1565,11 @@ Lockfile:
     version "1.2.2"
     resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz#9f84ba3244a512f3a54e5277e8eef4c489864e40"
     integrity sha512-cOU9usZw8/dXIXKtwa8pM0OTJQuJkxMN6w30csNRUerHfeQ5R6U3kkU/FtJeIf3M202OHfY2U8ccInBG7/xogA==
+  
+  class-transformer@^0.5.1:
+    version "0.5.1"
+    resolved "https://registry.yarnpkg.com/class-transformer/-/class-transformer-0.5.1.tgz#24147d5dffd2a6cea930a3250a677addf96ab336"
+    integrity sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==
   
   cli-highlight@^2.1.11:
     version "2.1.11"
