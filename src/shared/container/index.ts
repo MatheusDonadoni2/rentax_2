@@ -17,6 +17,9 @@ import { SpecificationRepository } from '@modules/cars/infra/typeorm/repositorie
 import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRepository';
 import { IUsersTokenRepository } from '@modules/accounts/infra/typeorm/repositories/IUsersTokensRepository';
 import { UsersTokenRepository } from '@modules/accounts/infra/typeorm/repositories/UsersTokensRepository';
+import { IStorageProvider } from './providers/StorageProvider/IStorageProvider';
+import { LocalStorageProvider } from './providers/StorageProvider/implementations/LocalStorageProvider';
+import { S3StorageProvider } from './providers/StorageProvider/implementations/S3StorageProvider';
 
 container.registerSingleton<ICategoriesRepository>(
   'CategoriesRepository',
@@ -52,4 +55,14 @@ container.registerSingleton<IRentalsRepository>(
 container.registerSingleton<IUsersTokenRepository>(
   'UsersTokensRepository',
   UsersTokenRepository,
+);
+
+const diskStorage = {
+  local: LocalStorageProvider,
+  s3: S3StorageProvider,
+};
+
+container.registerSingleton<IStorageProvider>(
+  'StorageProvider',
+  diskStorage[process.env.disk],
 );
